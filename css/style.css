@@ -63,6 +63,8 @@ header h1 {
   letter-spacing: 0.5px;
   color: #ff9800;
   transition: color 0.3s ease;
+  flex-grow: 1;
+  min-width: 0;
 }
 
 .theme-toggle {
@@ -75,6 +77,7 @@ header h1 {
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .theme-toggle:hover {
@@ -305,27 +308,35 @@ html[data-theme="light"] footer a:hover {
   }
 
   header {
-    padding: 1rem;
+    padding: 0.8rem;
     width: 100%;
     max-width: 100%;
   }
 
   .header-content {
-    gap: 0.5rem;
-    flex-wrap: wrap;
+    gap: 0.3rem;
+    flex-wrap: nowrap;
   }
 
   header h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    flex-grow: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .logo {
     height: 30px;
+    flex-shrink: 0;
   }
 
   .theme-toggle {
-    font-size: 1.2rem;
-    padding: 0.3rem 0.7rem;
+    font-size: 1rem;
+    padding: 0.3rem 0.5rem;
+    flex-shrink: 0;
+    border-width: 1px;
   }
 
   nav {
